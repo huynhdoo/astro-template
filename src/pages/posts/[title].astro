@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro'
+import MarkdownPostLayout from '../../layouts/MarkdownPostLayout.astro';
+
+const allPosts = await Astro.glob('./*.md')
+
+export async function getStaticPaths() {
+  const uniqueTitles = [...new Set(allPosts.map((post) => post.frontmatter.title).flat())];
+  return uniqueTitles.map((title) => {
+    return {
+      params: { title },
+    };
+  });
+}
+
+const { title } = Astro.params;
+const posts = allPosts.filter((post) => post.frontmatter.title == title);
+---
+<BaseLayout pageTitle={title}>
+    {posts?.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
+</BaseLayout>
