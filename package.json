@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "npm run build && DENO_DEPLOY_TOKEN=${DENO_DEPLOY_TOKEN} deployctl deploy --project=huynhdoo-astro-blog --no-static --include=./dist ./dist/server/entry.mjs"
   },
   "dependencies": {
     "@astrojs/deno": "^4.1.0",
