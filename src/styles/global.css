@@ -20,6 +20,17 @@ h1 {
     font-size: 2.5rem;
 }
 
+/* Theme style */
+
+html.dark {
+  background-color: #222;
+  color: #eee;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
 /* nav styles */
 .hamburger {
     padding-right: 20px;
