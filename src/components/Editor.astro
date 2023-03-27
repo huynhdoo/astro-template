@@ -1,0 +1,12 @@
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script is:inline src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<div id="editor">
+    <slot/>
+</div>
+
+<script>
+    var quill = new Quill('#editor', {
+        theme: 'snow'
+    });
+</script>
