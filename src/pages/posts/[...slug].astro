@@ -15,8 +15,6 @@ const entry = await getEntryBySlug('posts', slug);
 const { Content } = await entry.render()
 ---
 <MarkdownPostLayout frontmatter={entry.data}>
+  <Editor>{entry.body}</Editor>
   <Content />
-  <Editor>
-    <Content />
-  </Editor>
 </MarkdownPostLayout>
