@@ -1,7 +1,3 @@
-# lock file
-*.lock
-*-lock.json
-
 # build output
 dist/
 # generated types
