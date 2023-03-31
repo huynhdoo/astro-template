@@ -1,0 +1,26 @@
+backend:
+  name: github 
+  #name: test-repo
+  repo: huynhdoo/astro-blog
+  branch: main # Branch to update (optional; defaults to master)
+  base_url: https://netlify-cms-oauth-gamma.vercel.app/
+
+media_folder: public/uploads
+public_folder: /uploads
+publish_mode: editorial_workflow
+
+collections:
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'src/content/posts'
+    create: true
+    editor:
+      preview: true
+    slug: "{{slug}}"
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'pubDate', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

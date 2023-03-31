@@ -1,7 +1,7 @@
 ---
 import { getCollection, getEntryBySlug } from 'astro:content';
-import MarkdownPostLayout from '../../layouts/MarkdownPostLayout.astro';
-import Editor from '../../components/Editor.astro';
+import MarkdownPostLayout from '@layouts/MarkdownPostLayout.astro';
+import Editor from '@components/Editor.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts');
