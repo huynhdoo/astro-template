@@ -7,5 +7,7 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   output: "server",
   adapter: deno(),
-  integrations: [preact()]
+  integrations: [preact()],
+  site: 'https://huynhdoo.github.io',
+  base: '/astro-blog',
 });
