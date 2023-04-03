@@ -1,0 +1,15 @@
+---
+import { Editor } from '@tiptap/core'
+import StarterKit from '@tiptap/starter-kit'
+---
+<div class="element">
+</div>
+<script>
+    new Editor({
+        element: document.querySelector('.element'),
+        extensions: [
+            StarterKit,
+        ],
+        content: '<p>Hello World!</p>',
+    })
+</script>

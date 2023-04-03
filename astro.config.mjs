@@ -8,6 +8,4 @@ export default defineConfig({
   output: "server",
   adapter: deno(),
   integrations: [preact()],
-  site: 'https://huynhdoo.github.io',
-  base: '/astro-blog',
 });

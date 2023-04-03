@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import BlogPost from "@components/BlogPost.astro";
+import Tiptap from "@components/Tiptap.astro";
 
 const pageTitle = "My Astro Learning Blog";
 const allPosts = await getCollection("posts");
@@ -15,4 +16,5 @@ const allPosts = await getCollection("posts");
       ))
     }
   </ul>
+  <Tiptap>Test d'éditeur</Tiptap>
 </BaseLayout> 
