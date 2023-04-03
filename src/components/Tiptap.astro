@@ -1,11 +1,12 @@
----
-import { Editor } from '@tiptap/core'
-import StarterKit from '@tiptap/starter-kit'
----
 <div class="element">
+    <button onclick="editor.chain().focus().toggleBold().run()">
+        Bold
+    </button>
 </div>
 <script>
-    new Editor({
+    import { Editor } from '@tiptap/core'
+    import StarterKit from '@tiptap/starter-kit'
+    const editor = new Editor({
         element: document.querySelector('.element'),
         extensions: [
             StarterKit,
